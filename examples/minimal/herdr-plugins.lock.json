@@ -1,0 +1,35 @@
+[
+  {
+    "actions": [
+      {
+        "command": [
+          "lua",
+          "setup.lua"
+        ],
+        "id": "setup",
+        "title": "Set up dev layout"
+      }
+    ],
+    "description": "Create a simple three-pane development layout around the current pane.",
+    "enabled": true,
+    "manifest_path": "plugins/layout/dev-layout-bootstrap/herdr-plugin.toml",
+    "min_herdr_version": "0.7.0",
+    "name": "Dev Layout Bootstrap",
+    "platforms": [
+      "linux",
+      "macos"
+    ],
+    "plugin_id": "examples.dev-layout-bootstrap",
+    "plugin_root": "plugins/layout/dev-layout-bootstrap",
+    "source": {
+      "installed_unix_ms": 0,
+      "kind": "github",
+      "managed_path": "plugins/layout",
+      "owner": "ogulcancelik",
+      "repo": "herdr-plugin-examples",
+      "resolved_commit": "18709cdc851dd63ed0543eb8388343a5446fd8d8",
+      "subdir": "dev-layout-bootstrap"
+    },
+    "version": "0.1.0"
+  }
+]

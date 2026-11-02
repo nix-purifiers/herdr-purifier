@@ -1,0 +1,64 @@
+{
+  "config": "[[plugins]]\nname = \"layout\"\nsource = \"ogulcancelik/herdr-plugin-examples/dev-layout-bootstrap\"\n",
+  "configHash": "ef8874785eb9961da260a3d2898a52b2eb1d8c90047ea49f70c559d859d06cc0",
+  "contentHash": "14f3ce0108462c88ceb432ea205873644a11cc403c2622a38b4b97da1c9b6414",
+  "nativeHash": "6d5526a45bb687ec83d233192df17e9543e8e414edd501efb6981975e80879e6",
+  "nativeLock": "[\n  {\n    \"actions\": [\n      {\n        \"command\": [\n          \"lua\",\n          \"setup.lua\"\n        ],\n        \"id\": \"setup\",\n        \"title\": \"Set up dev layout\"\n      }\n    ],\n    \"description\": \"Create a simple three-pane development layout around the current pane.\",\n    \"enabled\": true,\n    \"manifest_path\": \"plugins/layout/dev-layout-bootstrap/herdr-plugin.toml\",\n    \"min_herdr_version\": \"0.7.0\",\n    \"name\": \"Dev Layout Bootstrap\",\n    \"platforms\": [\n      \"linux\",\n      \"macos\"\n    ],\n    \"plugin_id\": \"examples.dev-layout-bootstrap\",\n    \"plugin_root\": \"plugins/layout/dev-layout-bootstrap\",\n    \"source\": {\n      \"installed_unix_ms\": 0,\n      \"kind\": \"github\",\n      \"managed_path\": \"plugins/layout\",\n      \"owner\": \"ogulcancelik\",\n      \"repo\": \"herdr-plugin-examples\",\n      \"resolved_commit\": \"18709cdc851dd63ed0543eb8388343a5446fd8d8\",\n      \"subdir\": \"dev-layout-bootstrap\"\n    },\n    \"version\": \"0.1.0\"\n  }\n]\n",
+  "plugins": [
+    {
+      "entry": {
+        "git": {
+          "commitObject": {
+            "gitlinks": [],
+            "object": "dHJlZSAzZDBlYzNhZmRlYzc4ZWI2OTY5Y2YxYWQ0MzJjNjBkOWI0N2QwZmMxCmF1dGhvciBPZ3VsY2FuIENlbGlrIDxvZ3VsY2FuY2VsaWtAZ21haWwuY29tPiAxNzgxNTM3MDgyICswMzAwCmNvbW1pdHRlciBPZ3VsY2FuIENlbGlrIDxvZ3VsY2FuY2VsaWtAZ21haWwuY29tPiAxNzgxNTM3MDgyICswMzAwCgpoZXJkciBwbHVnaW4gZXhhbXBsZXMgZm9yIGhlcmRyIDAuNwo="
+          },
+          "leaveDotGit": true,
+          "rev": "18709cdc851dd63ed0543eb8388343a5446fd8d8",
+          "submodules": false,
+          "url": "https://github.com/ogulcancelik/herdr-plugin-examples.git"
+        },
+        "hash": "sha256-80WXauhnN57YjE0bDlFQmSslyOHg9oW38OnpMTlXoW8=",
+        "path": "layout"
+      },
+      "name": "layout",
+      "plugin": {
+        "actions": [
+          {
+            "command": [
+              "lua",
+              "setup.lua"
+            ],
+            "id": "setup",
+            "title": "Set up dev layout"
+          }
+        ],
+        "description": "Create a simple three-pane development layout around the current pane.",
+        "enabled": true,
+        "manifest_path": "plugins/layout/dev-layout-bootstrap/herdr-plugin.toml",
+        "min_herdr_version": "0.7.0",
+        "name": "Dev Layout Bootstrap",
+        "platforms": [
+          "linux",
+          "macos"
+        ],
+        "plugin_id": "examples.dev-layout-bootstrap",
+        "plugin_root": "plugins/layout/dev-layout-bootstrap",
+        "source": {
+          "installed_unix_ms": 0,
+          "kind": "github",
+          "managed_path": "plugins/layout",
+          "owner": "ogulcancelik",
+          "repo": "herdr-plugin-examples",
+          "resolved_commit": "18709cdc851dd63ed0543eb8388343a5446fd8d8",
+          "subdir": "dev-layout-bootstrap"
+        },
+        "version": "0.1.0"
+      }
+    }
+  ],
+  "toolVersions": {
+    "herdr": "0.9.5",
+    "resolver": "b79c17c7123d451960e8a59ee5d2c206ce0bb2383c101560375b69b4db39160a"
+  },
+  "version": 1
+}

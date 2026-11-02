@@ -1,0 +1,3 @@
+[[plugins]]
+name = "layout"
+source = "ogulcancelik/herdr-plugin-examples/dev-layout-bootstrap"
