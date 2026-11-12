@@ -20,7 +20,7 @@
       forAll = nixpkgs.lib.genAttrs systems;
       overlay = final: prev: {
         herdr-purifier = final.lib.makeScope final.newScope (scope: {
-          nativeHerdr = scope.callPackage ./nix/herdr.nix { };
+          nativeHerdr = scope.callPackage ./pkgs/build-herdr-project/herdr.nix { };
           toolchain = final.buildEnv {
             name = "herdr-purifier-toolchain";
             paths = [
@@ -33,11 +33,11 @@
               final.coreutils
             ];
           };
-          cli = scope.callPackage ./nix/cli.nix {
+          cli = scope.callPackage ./pkgs/cli/default.nix {
             nixpkgsSrc = nixpkgs;
             purifierSrc = purifier;
           };
-          buildHerdrProject = scope.callPackage ./nix/build-project.nix {
+          buildHerdrProject = scope.callPackage ./pkgs/build-herdr-project/default.nix {
             purifier = import (purifier + "/nix/lib") { inherit (final) lib; };
           };
         });
@@ -56,7 +56,7 @@
         default = (pkgsFor system).herdr-purifier.cli;
         cli = self.packages.${system}.default;
       });
-      lib.herdr-purifier.readLock = import ./nix/read-lock.nix { lib = nixpkgs.lib; };
+      lib.herdr-purifier = (nixpkgs.lib.extend (import ./lib-overlays/default)).herdr-purifier;
       apps = forAll (system: {
         default = {
           type = "app";

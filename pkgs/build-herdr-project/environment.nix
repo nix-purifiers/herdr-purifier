@@ -47,6 +47,6 @@ runCommand "purified-herdr-plugins"
     export SOURCE_DATE_EPOCH=1
     mkdir -p "$HOME" "$XDG_RUNTIME_DIR"
     chmod 700 "$XDG_RUNTIME_DIR"
-    python3 ${../herdr_purifier/build.py} ${metadata} ${sources} "$out" ${nativeHerdr}/bin/herdr
+    python3 ${../../herdr_purifier/build.py} ${metadata} ${sources} "$out" ${nativeHerdr}/bin/herdr
     ln -s ${sources} "$out/sources"
   ''
