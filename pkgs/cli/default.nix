@@ -15,14 +15,14 @@
 stdenvNoCC.mkDerivation {
   pname = "herdr-purifier";
   version = "0.1.0";
-  src = ../.;
+  src = ../..;
   nativeBuildInputs = [ makeWrapper ];
   dontBuild = true;
   installPhase = ''
     mkdir -p "$out/bin" "$out/lib/herdr-purifier"
-    cp -r herdr_purifier nix "$out/lib/herdr-purifier/"
+    cp -r herdr_purifier pkgs lib-overlays "$out/lib/herdr-purifier/"
     install -m755 bin/herdr-purifier "$out/bin/herdr-purifier"
-    substituteInPlace "$out/lib/herdr-purifier/nix/realize.nix" \
+    substituteInPlace "$out/lib/herdr-purifier/pkgs/build-herdr-project/realize.nix" \
       --replace-fail '@nixpkgs@' '${nixpkgsSrc}' \
       --replace-fail '@purifier@' '${purifierSrc}' \
       --replace-fail '@runtime@' "$out"
